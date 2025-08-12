@@ -13,11 +13,20 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { LibroComponent } from './components/libro/libro';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule, MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule    } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+
+
 
 @NgModule({
   declarations: [
     App,
-    ClienteComponent
+    ClienteComponent,
+    LibroComponent
   ],
   imports: [
     BrowserModule,
@@ -31,10 +40,16 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    MatDatepickerModule
   ],
   bootstrap: [App]
 })

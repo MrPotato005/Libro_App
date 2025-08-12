@@ -1,20 +1,24 @@
+import { Autor } from "./autor.model"
+import { Categoria } from "./categoria.model"
 
 export interface Libro{
 idLibro: number
 titulo: string 
 editorial: string 
-num_paginas: string 
+numPaginas: number
 edicion: string
 idioma: string
-fecha_publicacion: Date 
+fechaPublicacion: Date 
 descripcion: string 
-tipo_pasta: string 
+tipoPasta: string 
 isbn: string
-num_ejemplares: string 
+numEjemplares: number
 portada: string
 presentacion: string 
-precio: string
-id_categoria: number
-id_autor: number
+precio: number
+categoria: Categoria
+autor : Autor
+
+[key : string]: any;
 
 }

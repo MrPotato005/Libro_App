@@ -20,7 +20,7 @@ export class AutorComponent implements OnInit {
   idEditar: number | null = null;
 
   dataSource!: MatTableDataSource<Autor>;
-  mostrarColumnas: string[] = ['id_autor', 'nombre', 'apellido', 'pais', 'direccion', 'telefono', 'correo', 'acciones'];
+  mostrarColumnas: string[] = ['idAutor', 'nombre', 'apellido', 'pais', 'direccion', 'telefono', 'correo', 'acciones'];
 
   @ViewChild('formularioAutor') formularioAutor!: ElementRef;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -70,7 +70,7 @@ export class AutorComponent implements OnInit {
       cancelButtonColor: '#3085d6'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.autorService.delete(this.autor.id_autor).subscribe(() => {
+        this.autorService.delete(this.autor.idAutor).subscribe(() => {
           this.findAll();
           this.autor = {} as Autor;
           Swal.fire('Eliminado', 'El autor ha sido eliminado', 'success');
@@ -83,7 +83,7 @@ export class AutorComponent implements OnInit {
 
   editarAutor(autor: Autor): void {
     this.autor = { ...autor };
-    this.idEditar = autor.id_autor;
+    this.idEditar = autor.idAutor;
     this.editar = true;
 
     setTimeout(() => {

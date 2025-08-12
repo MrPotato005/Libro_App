@@ -8,8 +8,8 @@ import { Autor } from '../model/autor.model';
 })
 export class AutorService {
   
-  private baseUrl = "http://localhost:8080/autores";  // cambia si tu endpoint es diferente
-
+  private baseUrl = "http://localhost:8080/autores";  
+  
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<Autor[]> {

@@ -1,5 +1,5 @@
 export interface Autor{
-     id_autor:number
+     idAutor: number
      nombre:string
      apellido:string
      pais:string

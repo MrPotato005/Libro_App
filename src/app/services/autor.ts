@@ -7,7 +7,7 @@ import { Autor }  from '../model/autor.model';
     providedIn: 'root'
 })
 export class AutorService {
-    private baseUrl = 'http://localhost:8080/autor';  // URL to web servic
+    private baseUrl = 'http://localhost:8080/autor';  
     constructor(private http: HttpClient) { }
 
     findAll(): Observable<Autor[]>{

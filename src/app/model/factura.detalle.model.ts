@@ -1,9 +1,12 @@
-export interface Factura_Detalle{
+import { Factura } from "./factura.model"
+import { Libro } from "./libro.model"
+
+export interface FacturaDetalle{
 
 idFacturaDetalle: number
-cantidad: string
-subtotal:string
-id_factura:number
-id_libro:number
+cantidad: number
+subtotal: number
+Factura: Factura
+Libro: Libro
 
 }

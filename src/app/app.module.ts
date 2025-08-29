@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { App } from './app';
 import { ClienteComponent } from './components/cliente/cliente';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
@@ -20,6 +20,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatOptionModule, MatNativeDateModule} from '@angular/material/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { CarritoComponent } from './components/carrito/carrito';
+import { LibrosListComponents } from './components/libros-list/libros-list';
+import{MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -28,7 +35,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     ClienteComponent,
     AutorComponent,
     CategoriaComponent,
-    LibroComponent
+    LibroComponent,
+    CarritoComponent,
+    LibrosListComponents
   ],
   imports: [
     BrowserModule,
@@ -47,7 +56,14 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatOptionModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatMenuModule
+
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

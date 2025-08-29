@@ -1,10 +1,12 @@
+import { Cliente } from "./cliente.model"
+
 export interface Factura{
 idFactura: number 
-num_factura: string 
-fecha: string
-total_neto: string 
-iva: string
-total: string
-id_cliente: number
+numfactura: number
+fecha: Date
+totalNeto: number
+iva: number
+total: number
+Cliente: Cliente
    
 }
